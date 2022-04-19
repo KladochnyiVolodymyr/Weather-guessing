@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addGuees } from "../redux/actions/answerActions";
+import { updCityIndex, initCity } from "../redux/actions/cityActions";
 
 
 const GuessForm = () => {
@@ -16,6 +17,8 @@ const GuessForm = () => {
     const trimedValue = value.trim();  
     if(trimedValue) {  
       dispatch(addGuees(cityName, trimedValue));
+      dispatch(updCityIndex());
+      dispatch(initCity());
     }
     setValue("");
   };
