@@ -1,4 +1,4 @@
-import { ADD_GUEES, WIN_COUNTER } from "../types";
+import { ADD_GUEES, WIN_COUNTER, RESET_ANSWERS } from "../types";
 import api from "../../api";
 
 export function addGuees(city, guees) {
@@ -14,4 +14,10 @@ export function addGuees(city, guees) {
       dispatch({ type: ADD_GUEES, item: { guees, real, winnerStatus } });
     });
   };
+}
+
+export function resetAnswers() {
+  return async (dispatch) => {
+    dispatch({ type: RESET_ANSWERS });
+  }
 }
