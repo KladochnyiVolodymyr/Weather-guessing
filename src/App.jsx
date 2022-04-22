@@ -18,10 +18,12 @@ const App = () => {
     dispatch(initCity());
   }, []);
 
+  const isGameFinished = currentAttempt >= citiesCount;
+
   return (
     <div className="app container-fluid">
       <h1>Weather guessing</h1>
-      {currentAttempt >= citiesCount ? (
+      {isGameFinished ? (
         <Results />
       ) : (
         <>

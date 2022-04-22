@@ -24,12 +24,9 @@ code {
 
 .answers-item {
   margin: 0 20px;
-}
-
-.answers-item_win {
-  color: green;
-}
-
-.answers-item_loss {
   color: red;
+}
+
+.answers-item.is-win {
+  color: green;
 }

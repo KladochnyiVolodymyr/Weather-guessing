@@ -1,8 +1,15 @@
+import classNames from "classnames";
+
 const AnswersItem = ({ item }) => {
+
+  const {guees, real, winnerStatus} = item;
+
+  let itemClass = classNames('answers-item', { 'is-win': winnerStatus });
+  
   return (
-    <div className={item.winnerStatus ? "answers-item answers-item_win" : "answers-item answers-item_loss"}>
-      <p>{item.guees}</p>
-      <p>Was {item.real}</p>
+    <div className={itemClass}>
+      <p>{guees}</p>
+      <p>Was {real}</p>
     </div>
   );
 };
