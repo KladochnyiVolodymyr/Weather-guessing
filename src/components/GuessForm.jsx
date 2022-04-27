@@ -8,7 +8,7 @@ const GuessForm = () => {
   const [value, setValue] = useState("");
 
   const dispatch = useDispatch();
-  const cityName  = useSelector(state => state.initCity.currentCity);
+  const cityName  = useSelector(state => state.city.currentCity);
 
   const handleChange = (e) => setValue(e.target.value);
 

@@ -10,9 +10,9 @@ const App = () => {
   const dispatch = useDispatch();
 
   const currentAttempt = useSelector(
-    (state) => state.initCity.currentCityIndex
+    (state) => state.city.currentCityIndex
   );
-  const citiesCount = useSelector((state) => state.initCity.cities.length);
+  const citiesCount = useSelector((state) => state.city.cities.length);
 
   useEffect(() => {
     dispatch(initCity());

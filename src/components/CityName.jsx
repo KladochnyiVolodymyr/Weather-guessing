@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 const CityName = () => {
 
-  const cityName  = useSelector(state => state.initCity.currentCity);
+  const cityName  = useSelector(state => state.city.currentCity);
   
   return (
     <div className="city-name">
