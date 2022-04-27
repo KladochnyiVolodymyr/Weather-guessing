@@ -9,10 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 const App = () => {
   const dispatch = useDispatch();
 
-  const currentAttempt = useSelector(
-    (state) => state.city.currentCityIndex
-  );
+  const currentAttempt = useSelector((state) => state.city.currentCityIndex);
   const citiesCount = useSelector((state) => state.city.cities.length);
+  const loading = useSelector((state) => state.loader.loading);
 
   useEffect(() => {
     dispatch(initCity());
