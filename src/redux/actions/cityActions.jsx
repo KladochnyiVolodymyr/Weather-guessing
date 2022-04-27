@@ -1,4 +1,4 @@
-import { INIT_CITY, UPD_CITY_INDEX, RESET_CITY_INDEX } from "../types";
+import { INIT_CITY, UPD_CITY_INDEX, RESET_CITY } from "../types";
 
 export function initCity() {
   return async (dispatch) => {
@@ -15,6 +15,6 @@ export function updCityIndex() {
 
 export function resetCityIndex() {
   return async (dispatch) => {
-    dispatch({ type: RESET_CITY_INDEX });
+    dispatch({ type: RESET_CITY });
   };
 }

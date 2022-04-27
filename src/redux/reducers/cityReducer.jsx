@@ -1,4 +1,4 @@
-import { INIT_CITY, UPD_CITY_INDEX, WIN_COUNTER, RESET_CITY_INDEX } from "../types";
+import { INIT_CITY, UPD_CITY_INDEX, WIN_COUNTER, RESET_CITY } from "../types";
 
 const initState = {
   cities: ["Larnaca", "Paris", "Boston", "Tokio", "Kyiv"],
@@ -15,8 +15,8 @@ export const cityReducer = (state = initState, action) => {
       return { ...state, currentCityIndex: state.currentCityIndex + 1 };
     case WIN_COUNTER:
       return { ...state, winCounter: state.winCounter + 1 };
-    case RESET_CITY_INDEX:
-      return { ...state, currentCityIndex: 0 };
+    case RESET_CITY:
+      return { ...state, currentCityIndex: 0, winCounter: 0 };
     default:
       return state;
   }
