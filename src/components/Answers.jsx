@@ -4,7 +4,7 @@ import AnswersItem from "./AnswersItem";
 const Answers = () => {
   const answers = useSelector((state) => {
     const { answers } = state;
-    return answers.answers;
+    return answers;
   });
 
   const buildListItems = () => {

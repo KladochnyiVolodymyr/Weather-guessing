@@ -1,15 +1,13 @@
 import { ADD_GUEES, RESET_ANSWERS } from "../types";
 
-const initState = {
-  answers: [],
-};
+const initState = [];
 
 export const answersReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_GUEES:
-      return { ...state, answers: [...state.answers, action.item] };
+      return [ ...state, action.item ];
     case RESET_ANSWERS:
-      return { ...state, answers: [] };
+      return [];
     default:
       return state;
   }
