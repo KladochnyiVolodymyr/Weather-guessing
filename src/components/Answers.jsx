@@ -14,7 +14,7 @@ const Answers = () => {
     ));
   };
 
-  return <div className="answers">{buildListItems()}</div>;
+  return <div className="list-group list-group-horizontal">{buildListItems()}</div>;
 };
 
 export default Answers;

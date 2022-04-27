@@ -25,12 +25,13 @@ const GuessForm = () => {
 
   return (
     <div className="guess-form">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="input-group">
         <input
           onChange={handleChange}
           value={value}
           type="text"
           placeholder="Your guess"
+          className="form-control"
         />
         <input className="btn btn-primary" type="submit" value="Check" />
       </form>

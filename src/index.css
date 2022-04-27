@@ -14,19 +14,18 @@ code {
 
 .app {
   text-align: center;
-  max-width: 700px;
+  max-width: 500px;
 }
 
-.answers {
-  display: flex;
+.list-group {
   justify-content: center;
+  margin-top: 30px;
 }
 
-.answers-item {
-  margin: 0 20px;
-  color: red;
-}
-
-.answers-item.is-win {
+.win {
   color: green;
+}
+
+.loser {
+  color: red;
 }
